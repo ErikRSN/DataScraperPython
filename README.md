@@ -1,49 +1,32 @@
-# Installation Guide
-If you want to get started with part 6 of the FreeCodeCamp Python Scrapy course. Follow the steps below.
+# BookHarvester: A Scrapy Book Scraper
 
+Ths app uses Python Scrapy library to extract book details (title, price, rating, availability) from the "Books to Scrape" website and store the bookdata in the csv file.
 
-## Step 1 - Install & activate your python virtual environment
-To install the python virtual environment follow the following instructions below.
+## Installation
 
-For Mac: https://thepythonscrapyplaybook.com/freecodecamp-beginner-course/freecodecamp-scrapy-beginners-course-part-2-scrapy-environment/#setting-up-your-python-virtual-environment-on-macos
+1. Clone the repository:
 
-For Windows: https://thepythonscrapyplaybook.com/freecodecamp-beginner-course/freecodecamp-scrapy-beginners-course-part-2-scrapy-environment/#setting-up-your-python-virtual-environment-on-windows 
+   - `git clone https://github.com/ErikRSN/DataScraperPython`
+   - `cd BookHarvester`
 
-For Linux: https://thepythonscrapyplaybook.com/freecodecamp-beginner-course/freecodecamp-scrapy-beginners-course-part-2-scrapy-environment/#setting-up-your-python-virtual-environment-on-linux
+2. Set up a virtual environment:
 
-Then to activate it so that any new modules that are installed are installed into this virtual environment:
+   - For Windows:
+     - `python -m venv venv`
+     - `venv\Scripts\activate`
+   - For macOS/Linux:
+     - `python3 -m venv venv`
+     - `source venv/bin/activate`
 
-`source venv/bin/activate`
+3. Install dependencies:
+   - `pip install -r requirements.txt`
 
+## Usage
 
-## Step 2 - Clone the project
-Clone the project from github:
-`git clone https://github.com/python-scrapy-playbook/freeCodeCamp-part-6.git`
+Run the scraper:
 
+- `scrapy crawl bookscraper`
 
-## Step 3 - Install the required python modules
-To install the required modules for this python project to run you need to install the required python modules using the following command:
+## Contributing
 
-`pip install -r requirements.txt`
-
-
-## Step 4 - Run the project/ Follow the course
-Once the required python modules are installed you should be able to view/run the Python Scrapy Spider with the following command (from within the project folder):
-
-Cd into the project spiders: `cd bookscraper`
-
-View the project spiders: `scrapy list`
-
-Run the project spider: `scrapy crawl bookspider`
-
-
-
-# Helpful Dubugging 
-If you have issues running the `pip install -r requirements.txt` command this can be due to some things not being up to date on your computer. 
-
-Running the following may solve some of these issues:
-
-`pip install --upgrade pip`
-
-The following error: `NotADirectoryError: [Errno 20] Not a directory: 'pkg-config'` might be solvable by running:
-`export PKG_CONFIG=/path/to/pkg-config`
+Fork the repository and submit a pull request.
