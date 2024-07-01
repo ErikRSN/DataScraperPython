@@ -28,3 +28,4 @@ class  BookItem(scrapy.Item):
     description = scrapy.Field()
     price = scrapy.Field()
     url = scrapy.Field()
+    upc = scrapy.Field()
