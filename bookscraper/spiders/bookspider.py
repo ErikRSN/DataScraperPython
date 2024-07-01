@@ -28,6 +28,9 @@ class BookspiderSpider(scrapy.Spider):
     def parse_book_page(self, response):
 
         table_rows = response.css("table tr")
+
+        book_item = BookItem()
+        
         
         yield {
             'url' : response.url,
