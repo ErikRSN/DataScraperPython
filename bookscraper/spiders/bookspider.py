@@ -49,13 +49,8 @@ class BookspiderSpider(scrapy.Spider):
 
         
 
-
-
-
-
-
-
-        yield BookItem
+        yield book_item
+        
 
 
 
