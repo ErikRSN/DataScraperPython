@@ -3,7 +3,8 @@ from urllib.parse import urljoin
 
 class BookspiderSpider(scrapy.Spider):
     name = 'bookspider'
-
+    allowed_domains = ['books.toscrape.com']
+    start_urls = ['http://books.toscrape.com/']
 
     def parse(self, response):
         # Your initial code here
